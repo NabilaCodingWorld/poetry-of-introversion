@@ -4,6 +4,7 @@ import Goal from '../Goal/Goal';
 import Hobby from '../Hobby/Hobby';
 import Photo from '../Photo/Photo';
 import Quote from '../Quote/Quote';
+import Personality from '../Personality/Personality';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Hobby></Hobby>
             <Photo></Photo>
             <Quote></Quote>
+            <Personality></Personality>
         </div>
     );
 };

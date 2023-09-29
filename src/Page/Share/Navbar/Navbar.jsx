@@ -12,9 +12,9 @@ const Navbar = () => {
 
         <Link to="/novel"><li><a className='hover:text-white'>Novel and Movie Review</a></li></Link>
 
-        <Link><li><a className='hover:text-white'>About Me</a></li></Link>
+        <Link to="/aboutMe"><li><a className='hover:text-white'>About Me</a></li></Link>
 
-        <Link><li><a className='hover:text-white'>Contact Us</a></li></Link>
+        <Link to="/contact"><li><a className='hover:text-white'>Contact Us</a></li></Link>
     </>
 
     return (
