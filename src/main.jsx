@@ -9,7 +9,7 @@ import { router } from './Route/Route.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div style={{fontFamily:'Roboto'}}>
+    <div style={{fontFamily:'Cursive'}}>
     <RouterProvider router={router} />
     </div>
   </React.StrictMode>,

@@ -5,21 +5,21 @@ const Navbar = () => {
 
     const navOption = <>
 
-        <Link to="/"><li><a className='hover:text-white'>Home</a></li></Link>
+        <Link to="/"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Home</a></li></Link>
         
-        <Link to="/dailyBlog"><li><a className='hover:text-white'>Daily Blog</a></li></Link>
+        <Link to="/dailyBlog"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Daily Blog</a></li></Link>
 
 
-        <Link to="/novel"><li><a className='hover:text-white'>Novel and Movie Review</a></li></Link>
+        <Link to="/novel"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Novel and Movie Review</a></li></Link>
 
-        <Link to="/aboutMe"><li><a className='hover:text-white'>About Me</a></li></Link>
+        <Link to="/aboutMe"><li><a className='md:hover:text-white md:text-neutral-content text-black'>About Me</a></li></Link>
 
-        <Link to="/contact"><li><a className='hover:text-white'>Contact Us</a></li></Link>
+        <Link to="/contact"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Contact Us</a></li></Link>
     </>
 
     return (
         <div>
-            <div className="navbar  text-neutral-content  font-bold bg-[#00061A]">
+            <div className="navbar text-neutral-content font-bold  bg-[#00061A]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,9 +29,9 @@ const Navbar = () => {
                             {navOption}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-sm md:text-xl">Poetry Of Introversion</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center  hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navOption}
                     </ul>

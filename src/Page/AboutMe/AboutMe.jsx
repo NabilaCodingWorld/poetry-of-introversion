@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaFacebook, FaLinkedin, FaGithub, FaWhatsapp, FaTelegram, FaTwitter, FaPortrait, FaMailBulk, FaInstagram } from 'react-icons/fa';
 import Marquee from "react-fast-marquee";
 import KnowledgeIcon from './KnowledgeIcon';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutMe = () => {
+
+    useEffect(() => {
+        Aos.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
+
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className="hero min-h-screen bg-fixed" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/close-up-woman-holding-coffee-cup_23-2148503418.jpg?w=740&t=st=1695923100~exp=1695923700~hmac=4d02426e1bf63acf148e632da62a8e21cba28334c14ceb835967ef951998a6d9)' }}>
                 <div className="hero-overlay bg-opacity-40"></div>
                 <div className="hero-content text-center text-neutral-content">
@@ -22,9 +33,9 @@ const AboutMe = () => {
             <div className="divider my-20 md:mx-10 md:text-2xl">Some Information About Myself</div>
 
             <div className='grid md:grid-cols-2 justify-center items-center mx-10 my-10'>
-                <img className='md:w-[50%] w-[100%] mb-5' src="https://i.ibb.co/c2wJHKD/nabila-50ca7da1.png" alt="" />
+                <img data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" className='md:w-[50%] w-[100%] mb-5' src="https://i.ibb.co/c2wJHKD/nabila-50ca7da1.png" alt="" />
 
-                <div className='text-xl'>
+                <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" className='text-xl'>
                     <p className='mb-2'> <b>Name: </b> Raha Musfiq Nabila </p>
                     <p className='mb-2'> <b>Date of Birth: </b> 17 May, 1997 </p>
                     <p className='mb-2'> <b>Home Town: </b> Shathibari, Mithapukur, Rangpur </p>

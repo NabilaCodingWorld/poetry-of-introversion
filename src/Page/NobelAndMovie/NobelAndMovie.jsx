@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NovelReview from './NovelReview';
 import Pagination from '../Pagination/Pagination';
+import Date from '../Date/Date';
 
 const NobelAndMovie = () => {
     // Define novels as a state variable using useState
@@ -22,8 +23,13 @@ const NobelAndMovie = () => {
     const currentPosts = novels.slice(firstPostIndex, lastPageIndex);
 
     return (
-        <div>
-            <div>
+        <div> <br />
+
+            <Date></Date>
+
+            <div className="divider my-20 mx-10 md:text-2xl">Review Novels and Movies</div>
+
+            <div className='grid md:grid-cols-3 gap-10 justify-center items-center md:mx-10 mx-4 my-10'>
             {currentPosts.map((novel) => (
                 <NovelReview key={novel._id} novel={novel} />
             ))}
