@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import KnowledgeIcon from './KnowledgeIcon';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const AboutMe = () => {
 
@@ -17,6 +18,11 @@ const AboutMe = () => {
 
     return (
         <div className='overflow-hidden'>
+
+            <Helmet>
+                <title> Poetry Of Introversion | About Me </title>
+            </Helmet>
+
             <div className="hero min-h-screen bg-fixed" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/close-up-woman-holding-coffee-cup_23-2148503418.jpg?w=740&t=st=1695923100~exp=1695923700~hmac=4d02426e1bf63acf148e632da62a8e21cba28334c14ceb835967ef951998a6d9)' }}>
                 <div className="hero-overlay bg-opacity-40"></div>
                 <div className="hero-content text-center text-neutral-content">

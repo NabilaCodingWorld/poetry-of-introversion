@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import './DailyBlogDetail.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const DailyBlogDetail = () => {
 
@@ -23,6 +24,11 @@ const DailyBlogDetail = () => {
 
     return (
         <div className='overflow-hidden'>
+
+            <Helmet>
+                <title> Poetry Of Introversion | Blog Detail </title>
+            </Helmet>
+
             <div className="divider my-20 mx-10 md:text-2xl">{author}</div>
 
             <div className='grid md:grid-cols-2 mb-5 justify-center items-center md:mx-10'>

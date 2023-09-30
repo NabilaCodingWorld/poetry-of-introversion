@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import bgVideoSignUp from '../../assets/production_id_4524595 (1080p).mp4'
 import './SignUp.css'
 import { FaEye, FaRegEye } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
+
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     // show password
     const [showPassword, setShowPassword] = useState(false);
@@ -19,6 +24,7 @@ const SignUp = () => {
     const {
         register,
         handleSubmit,
+        reset,
         watch,
         formState: { errors },
     } = useForm()
@@ -31,8 +37,43 @@ const SignUp = () => {
         });
     }, []);
 
+    const navigate = useNavigate();
+
+
+    const onSubmit = data => {
+
+        console.log(data);
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        console.log('login')
+                        reset()
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Registration Successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        navigate('/login')
+
+
+                    })
+                    .catch(error => console.log(error))
+            })
+    }
+
     return (
         <div className='overflow-hidden'>
+
+            <Helmet>
+                <title> Poetry Of Introversion | Sign Up </title>
+            </Helmet>
+
             <div className="signUp">
 
                 <div className="divider my-20 mx-10 md:text-2xl text-white"> <span className='bg-black p-4 bg-opacity-40 rounded-2xl'>Sign Up</span> </div>
@@ -46,7 +87,7 @@ const SignUp = () => {
 
                     <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
 
-                        <form>
+                        <form onSubmit={handleSubmit(onSubmit)}>
 
                             <div className="md:max-w-md md:w-[1000px] bg-black p-10 bg-opacity-50 text-black  mx-auto">
 
@@ -171,7 +212,6 @@ const SignUp = () => {
                         </form>
 
                         <h1 className='text-center mt-10 md:text-xl text-sm pb-5 font-bold text-white'>If you have account already? So <Link className='text-blue-500' to='/login'>Log In</Link> Please </h1>
-
 
                     </div>
 

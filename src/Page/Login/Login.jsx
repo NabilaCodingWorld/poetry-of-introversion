@@ -1,12 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaEye, FaRegEye } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import bgVideoLogIn from '../../assets/production_id_5125003 (2160p).mp4'
 import './LogIn.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+
+    const { loggIn } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     // show password
     const [showPassword, setShowPassword] = useState(false);
@@ -23,8 +34,51 @@ const Login = () => {
         });
     }, []);
 
+
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        setError('');
+        setSuccess('');
+
+        loggIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+                setSuccess('Logged in successfully!');
+                setError('');
+
+                // sweet alert import
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Logged In Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, { replace: true })
+            })
+
+            .catch(error => {
+                setError(error.message);
+                setSuccess('');
+            });
+    }
+
     return (
         <div className='overflow-hidden'>
+
+            <Helmet>
+                <title> Poetry Of Introversion | Log In </title>
+            </Helmet>
+
             <div className="login">
 
                 <div className="divider my-20 mx-10 md:text-2xl   text-white"><span className='bg-black p-4 bg-opacity-40 rounded-2xl'>Log In</span></div>
@@ -38,7 +92,7 @@ const Login = () => {
 
                     <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
 
-                        <form>
+                        <form onSubmit={handleLogin}>
 
                             <div className="md:max-w-md md:w-[1000px] bg-black p-10 bg-opacity-50 text-black  mx-auto">
 
@@ -108,18 +162,16 @@ const Login = () => {
 
                                         type="submit" value="Log In" />
 
-
                                 </div>
 
-
-
                             </div>
-
-
 
                         </form>
 
                         <h1 className='text-center mt-10 md:text-xl pb-5 font-bold text-white'>Are You New Here? First <Link className='text-blue-500' to='/signup'>Sign Up</Link> Please </h1>
+
+                        <p className='text-center text-red-700 font-bold'> {error} </p>
+                        <p className='text-center text-green-700 font-bold'> {success} </p>
 
 
                     </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const NovelDetails = () => {
 
@@ -21,6 +22,12 @@ const NovelDetails = () => {
 
     return (
         <div className='overflow-hidden'>
+
+
+            <Helmet>
+                <title> Poetry Of Introversion | Novel Detail </title>
+            </Helmet>
+
             <div className="divider my-20 mx-10 md:text-2xl">{author}</div>
 
             <div className='grid md:grid-cols-2 mb-5 justify-center items-center md:mx-10'>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DailyUseBlog from './DailyUseBlog';
 import Pagination from '../Pagination/Pagination';
 import Date from '../Date/Date';
+import { Helmet } from 'react-helmet-async';
 
 
 const DailyBlog = () => {
@@ -23,6 +24,11 @@ const DailyBlog = () => {
 
     return (
         <div> <br />
+
+            <Helmet>
+                <title> Poetry Of Introversion | Daily Blog </title>
+            </Helmet>
+
             <Date></Date>
             <div className="divider my-20 mx-10 md:text-2xl">My Daily Routine</div>
             <div className='grid md:grid-cols-3 gap-10 md:mx-10 mx-5 my-10'>

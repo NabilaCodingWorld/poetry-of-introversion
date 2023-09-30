@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
+    const renderAvatar = () => {
+        if (user) {
+            return (
+                <div className="avatar">
+                    <div className="w-12 md:ml-40 ml-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src={user.photoURL} title={user.displayName} alt={user.displayName} />
+                    </div>
+                </div>
+            );
+        }
+
+    }
 
     const navOption = <>
 
         <Link to="/"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Home</a></li></Link>
-        
+
         <Link to="/dailyBlog"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Daily Blog</a></li></Link>
 
 
@@ -16,7 +38,24 @@ const Navbar = () => {
 
         <Link to="/contact"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Contact Us</a></li></Link>
 
-        <Link to="/login"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Login</a></li></Link>
+
+        {
+            user ?
+                <> <button
+                    style={{
+                        background:
+                            'linear-gradient(260deg, rgba(239, 13, 121, 1) 0%, rgba(174, 8, 140, 1) 71%)',
+                        color: '#fff', // Text color
+                        border: 'none', // Remove the border
+                        padding: '10px 20px', // Adjust padding for better appearance
+                        borderRadius: '5px', // Add border radius for rounded corners
+                        cursor: 'pointer', // Change cursor on hover
+                    }}
+                    onClick={handleLogOut} className='btn btn-sm'> Log out </button> </>
+                :
+                <>
+                    <Link to="/login"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Login</a></li></Link> </>
+        }
     </>
 
     return (
@@ -38,9 +77,17 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+
+
+                <div className="navbar-end md:mr-10">
+                    {user && (
+                        <div >
+                            {renderAvatar()}
+                        </div>
+                    )}
                 </div>
+
+
             </div>
         </div>
     );

@@ -11,6 +11,7 @@ import DailyBlogDetail from "../Page/DailyBlog/DailyBlogDetail";
 import NovelDetails from "../Page/NobelAndMovie/NovelDetails";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dailyBlog/:_id",
-        element: <DailyBlogDetail></DailyBlogDetail>,
+        element: <PrivateRoute><DailyBlogDetail></DailyBlogDetail></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/dailyBlog/${params._id}`)
       },
       {
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
 
       {
         path: "/novel/:_id",
-        element: <NovelDetails></NovelDetails>,
+        element: <PrivateRoute><NovelDetails></NovelDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/novel/${params._id}`)
       },
 
