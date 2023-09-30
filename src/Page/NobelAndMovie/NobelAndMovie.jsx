@@ -8,11 +8,11 @@ const NobelAndMovie = () => {
     const [novels, setNovels] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(3);
+    const [postsPerPage, setPostsPerPage] = useState(6);
 
     useEffect(() => {
         // Fetch data from 'novel.json' and update the 'novels' state
-        fetch('novel.json')
+        fetch('http://localhost:5000/novel')
             .then((res) => res.json())
             .then((data) => setNovels(data))
             // .catch((error) => console.error('Error fetching data:', error));

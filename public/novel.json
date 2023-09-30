@@ -1,7 +1,7 @@
 [
     {
            
-            "_id": 1,
+         
             "image": "https://images.squarespace-cdn.com/content/v1/5ff5823c7a796c242547f19e/f92f362a-ea81-418b-8e66-a5c3c54913f6/rich-soul-uhri3Up9WB8-unsplash.jpg?format=500w",
             
             "author": "Saint Augustine",
@@ -13,7 +13,7 @@
   
     {
          
-            "_id": 2,
+           
             "image": "https://images.squarespace-cdn.com/content/v1/5ff5823c7a796c242547f19e/1684505045482-YZT567261F9S6IFPQLQR/What+is+an+introvert%3F.jpg?format=500w",
             
             "author": "Saint Augustine",
@@ -25,7 +25,7 @@
   
     {
             
-            "_id": 3,
+            
             "image": "https://images.squarespace-cdn.com/content/v1/5ff5823c7a796c242547f19e/7b1f7527-7df1-4f43-9c88-730812c1e8d5/mathilde-langevin-TJ6eg8okyNs-unsplash.jpg?format=750w",
             
             "author": "Saint Augustine",

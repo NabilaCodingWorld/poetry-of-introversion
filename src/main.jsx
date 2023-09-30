@@ -9,8 +9,8 @@ import { router } from './Route/Route.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div style={{fontFamily:'Cursive'}}>
-    <RouterProvider router={router} />
+    <div style={{ fontFamily: 'cursive' }}>
+      <RouterProvider router={router} />
     </div>
   </React.StrictMode>,
 )

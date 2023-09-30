@@ -7,7 +7,7 @@ const Quote = () => {
     const [quotes, setQuotes] = useState([]);
 
     useEffect(() => {
-        fetch('quote.json')
+        fetch('http://localhost:5000/quote')
             .then(res => res.json())
             .then(data => setQuotes(data))
     }, [])

@@ -15,6 +15,8 @@ const Navbar = () => {
         <Link to="/aboutMe"><li><a className='md:hover:text-white md:text-neutral-content text-black'>About Me</a></li></Link>
 
         <Link to="/contact"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Contact Us</a></li></Link>
+
+        <Link to="/login"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Login</a></li></Link>
     </>
 
     return (

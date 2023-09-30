@@ -7,7 +7,7 @@ import { FaComment, FaHeart } from 'react-icons/fa';
 
 const DailyUseBlog = ({ dailyBlog }) => {
 
-    const { img, author, text, _id, date } = dailyBlog;
+    const { image, author, text, _id, date } = dailyBlog;
 
     // Define a maximum character limit for the description
     const maxDescriptionLength = 200;
@@ -35,7 +35,7 @@ const DailyUseBlog = ({ dailyBlog }) => {
             <div className='image'>
                 <div id="zoom-In">
                     <figure>
-                        <img className='md:w-full w-80' src={img} alt="" />
+                        <img className='md:w-full w-80' src={image} alt="" />
                     </figure>
                 </div>
             </div>
@@ -44,7 +44,7 @@ const DailyUseBlog = ({ dailyBlog }) => {
 
             <p className='text-center  md:text-xl mt-3'>{author}</p>
 
-            <p className='my-5 md:text-xl text-sm'>{truncatedDescription} <span className='text-blue-600'> <Link to={`/destination/${_id}`}> See More </Link> </span> </p>
+            <p className='my-5 md:text-xl text-sm'>{truncatedDescription} <span className='text-blue-600'> <Link to={`/dailyBlog/${_id}`}> See More </Link> </span> </p>
 
             <div className='flex gap-10'>
                 <p> <FaHeart className='md:w-8 md:h-8 text-red-700'></FaHeart> </p>

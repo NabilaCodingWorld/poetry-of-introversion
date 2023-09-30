@@ -12,7 +12,7 @@ const DailyBlog = () => {
     const [postsPerPage, setPostsPerPage] = useState(6);
 
     useEffect(() => {
-        fetch('dailyBlog.json')
+        fetch('http://localhost:5000/dailyBlog')
             .then(res => res.json())
             .then(data => setDailyBlogs(data))
     }, [])

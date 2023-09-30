@@ -41,7 +41,7 @@ const NovelReview = ({ novel }) => {
                 <div>
                     <p className='text-center md:text-2xl mb-4 mt-4'>{author}</p>
 
-                    <p className='my-5 md:text-xl text-sm'>{truncatedDescription} <span className='text-blue-600'> <Link to={`/destination/${_id}`}> See More </Link> </span> </p>
+                    <p className='my-5 md:text-xl text-sm'>{truncatedDescription} <span className='text-blue-600'> <Link to={`/novel/${_id}`}> See More </Link> </span> </p>
 
                     <div className='flex gap-10'>
                         <p> <FaHeart className='md:w-8 md:h-8 text-red-700'></FaHeart> </p>

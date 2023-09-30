@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import img from '../../../assets/istockphoto-500954400-170667a.jpg'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -13,6 +13,8 @@ const Coffee = () => {
         });
     }, []);
 
+
+
     return (
         <div>
             <div className="divider my-20 mx-10 md:text-2xl">Take Coffee EveryDay for Relaxation</div>
@@ -25,12 +27,19 @@ const Coffee = () => {
 
                     Beyond its taste and wakefulness benefits, coffee has also been linked to numerous health advantages when consumed in moderation. Research suggests it may reduce the risk of certain diseases, including Parkinson's and type 2 diabetes. Additionally, the act of savoring a cup of coffee can provide moments of relaxation and contemplation in an otherwise hectic world. <br />
 
-                    Ultimately, coffee's allure extends far beyond its stimulating properties. It's a social beverage, a source of comfort, and a daily indulgence that, for many, adds a dash of pleasure to life's daily grind. This combination of flavor, function, and tradition makes coffee undeniably one of the best-loved beverages worldwide.</p>
+                </p>
 
 
 
 
-                <img data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" src={img} alt="" />
+                <div>
+                    <img
+                        src={img}
+                        alt=""
+                        className='hover:translate-x-3 duration-700'
+
+                    />
+                </div>
 
             </div>
         </div>
