@@ -19,9 +19,9 @@ const Hobby = () => {
 
             {/* drawing */}
 
-            <div className='grid md:grid-cols-3 mx-10 my-10 gap-10'>
+            <div  className='grid md:grid-cols-3 mx-10 my-10 gap-10'>
 
-                <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
+                <div className='p-8 bg-white' data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
                     <div className='myImages'>
                         <div id="zooms-In">
                             <figure>
@@ -36,7 +36,7 @@ const Hobby = () => {
 
                 {/* Reading Novel */}
 
-                <div data-aos="flip-right" data-aos-offset="200" data-aos-duration="1000">
+                <div className='p-8 bg-white' data-aos="flip-right" data-aos-offset="200" data-aos-duration="1000">
 
 
                     <div className='myImages'>
@@ -53,7 +53,7 @@ const Hobby = () => {
 
                 {/* Gardening */}
 
-                <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000">
+                <div className='p-8 bg-white' data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000">
 
                     <div className='myImages'>
                         <div id="zooms-In">

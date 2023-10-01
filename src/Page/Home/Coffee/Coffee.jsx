@@ -19,7 +19,7 @@ const Coffee = () => {
         <div>
             <div className="divider my-20 mx-10 md:text-2xl">Take Coffee EveryDay for Relaxation</div>
 
-            <div className='grid md:grid-cols-2 gap-20 md:mx-10 mx-4 justify-center items-center'>
+            <div className='grid md:grid-cols-2 gap-20 md:mx-10 mx-4 justify-center items-center bg-white p-10'>
 
                 <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" className='md:text-xl'>Coffee is often celebrated as one of the best beverages for a variety of reasons. Its popularity spans the globe, and for good reason. Firstly, coffee is renowned for its rich and complex flavor profile, ranging from the deep, bold notes of dark roast to the bright and fruity undertones of lighter brews. This diversity in taste ensures there's a coffee to suit nearly every palate. <br />
 
@@ -29,15 +29,12 @@ const Coffee = () => {
 
                 </p>
 
-
-
-
                 <div>
                     <img
                         src={img}
                         alt=""
-                        className='hover:translate-x-3 duration-700'
-
+                        className='hover:shadow-xl'
+                        data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000"
                     />
                 </div>
 

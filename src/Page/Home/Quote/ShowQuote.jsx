@@ -15,7 +15,7 @@ const ShowQuote = ({ quote }) => {
     }, []);
 
     return (
-        <div className='mb-10 shadow-lg p-5' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+        <div className='mb-10  hover:shadow-2xl  bg-white p-10' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
             <blockquote>
                 <p className='md:text-xl'>{text}.</p>
                 <cite className='md:text-xl'>- {author}</cite>

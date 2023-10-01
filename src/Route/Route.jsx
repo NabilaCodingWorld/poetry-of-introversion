@@ -12,6 +12,11 @@ import NovelDetails from "../Page/NobelAndMovie/NovelDetails";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../Page/Dashboard/MyCart/MyCart";
+import ManageBlog from "../Page/Dashboard/ManageBlog";
+import AddNovel from "../Page/Dashboard/AddNovel";
+import ManageNovel from "../Page/Dashboard/ManageNovel";
 
 export const router = createBrowserRouter([
   {
@@ -62,4 +67,27 @@ export const router = createBrowserRouter([
 
     ]
   },
+
+  {
+    path: '/dashboard',
+    element: <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
+    children: [
+      {
+        path: 'myCart',
+        element: <MyCart></MyCart>
+      },
+      {
+        path: 'manageBlog',
+        element: <ManageBlog></ManageBlog>
+      },
+      {
+        path: 'addNovel',
+        element: <AddNovel></AddNovel>
+      },
+      {
+        path: 'manageNovel',
+        element: <ManageNovel></ManageNovel>
+      },
+    ]
+  }
 ]);

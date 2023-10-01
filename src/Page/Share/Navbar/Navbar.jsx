@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Navbar = () => {
 
@@ -32,7 +33,7 @@ const Navbar = () => {
         <Link to="/dailyBlog"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Daily Blog</a></li></Link>
 
 
-        <Link to="/novel"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Novel and Movie Review</a></li></Link>
+        <Link to="/novel"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Novel & Movie Review</a></li></Link>
 
         <Link to="/aboutMe"><li><a className='md:hover:text-white md:text-neutral-content text-black'>About Me</a></li></Link>
 
@@ -41,20 +42,24 @@ const Navbar = () => {
 
         {
             user ?
-                <> <button
+                <> 
+                
+                <Link to="/dashboard/myCart"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Dashboard</a></li></Link>
+
+                <button
                     style={{
                         background:
                             'linear-gradient(260deg, rgba(239, 13, 121, 1) 0%, rgba(174, 8, 140, 1) 71%)',
-                        color: '#fff', // Text color
-                        border: 'none', // Remove the border
-                        padding: '10px 20px', // Adjust padding for better appearance
-                        borderRadius: '5px', // Add border radius for rounded corners
-                        cursor: 'pointer', // Change cursor on hover
+                        color: '#fff',
+                        border: 'none', 
+                        padding: '10px 20px', 
+                        borderRadius: '5px',
+                        cursor: 'pointer', 
                     }}
-                    onClick={handleLogOut} className='btn btn-sm'> Log out </button> </>
+                    onClick={handleLogOut} className='btn btn-sm'> <FaSignOutAlt></FaSignOutAlt> Log out </button> </>
                 :
                 <>
-                    <Link to="/login"><li><a className='md:hover:text-white md:text-neutral-content text-black'>Login</a></li></Link> </>
+                    <Link to="/login"><li><a className='md:hover:text-white md:text-neutral-content text-black'> <FaSignInAlt></FaSignInAlt> Login</a></li></Link> </>
         }
     </>
 

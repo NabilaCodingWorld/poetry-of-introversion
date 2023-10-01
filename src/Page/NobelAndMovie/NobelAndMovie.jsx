@@ -24,7 +24,7 @@ const NobelAndMovie = () => {
     const currentPosts = novels.slice(firstPostIndex, lastPageIndex);
 
     return (
-        <div> <br />
+        <div className='bg-gray-300'> <br />
 
             <Helmet>
                 <title> Poetry Of Introversion | Novel </title>

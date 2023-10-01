@@ -26,7 +26,7 @@ const NovelReview = ({ novel }) => {
     }, []);
 
     return (
-        <div className='overflow-hidden' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000"> <br />
+        <div className='overflow-hidden bg-white px-5 py-2' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000"> <br />
 
             <div >
                 <div className='images'>

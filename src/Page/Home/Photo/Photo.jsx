@@ -34,7 +34,7 @@ const Photo = () => {
 
             <div className="divider my-20 md:mx-10 mx-4 text-2xl">Some Photos</div>
 
-            <div className='mx-10 mb-10 border-2 p-5'  data-aos="flip-up" data-aos-offset="200" data-aos-duration="1000">
+            <div className='mx-10 mb-10 bg-white p-8'  data-aos="flip-up" data-aos-offset="200" data-aos-duration="1000">
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}

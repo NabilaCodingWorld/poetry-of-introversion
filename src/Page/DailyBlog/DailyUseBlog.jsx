@@ -29,7 +29,7 @@ const DailyUseBlog = ({ dailyBlog }) => {
 
 
     return (
-        <div className='overflow-hidden' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+        <div className='overflow-hidden bg-white px-5 py-8' data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
 
         
             <div className='image'>

@@ -23,7 +23,7 @@ const DailyBlog = () => {
     const currentPosts = dailyBlogs.slice(firstPostIndex, lastPageIndex);
 
     return (
-        <div> <br />
+        <div className='bg-gray-300'> <br />
 
             <Helmet>
                 <title> Poetry Of Introversion | Daily Blog </title>
@@ -31,7 +31,7 @@ const DailyBlog = () => {
 
             <Date></Date>
             <div className="divider my-20 mx-10 md:text-2xl">My Daily Routine</div>
-            <div className='grid md:grid-cols-3 gap-10 md:mx-10 mx-5 my-10'>
+            <div className='grid md:grid-cols-3 gap-10 md:mx-10 mx-5 my-10 '>
                 {
                     currentPosts.map(dailyBlog => <DailyUseBlog key={dailyBlog._id} dailyBlog={dailyBlog} ></DailyUseBlog>)
                 }

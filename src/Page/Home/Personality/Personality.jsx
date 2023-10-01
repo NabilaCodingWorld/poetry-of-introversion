@@ -15,9 +15,9 @@ const Personality = () => {
 
     return (
         <div className='overflow-hidden'>
-            <div className="divider my-20 mx-10 text-2xl">My Personality</div>
+            <div className="divider mt-20 mx-10 text-2xl">My Personality</div>
 
-            <div className='grid md:grid-cols-3 gap-10 mx-10 text-center mb-10 text-2xl '>
+            <div className='grid md:grid-cols-3 gap-10 mx-10 text-center mb-10 text-2xl bg-white p-10'>
 
                 <div data-aos="flip-left" data-aos-offset="200" data-aos-duration="1000" className='shadow-lg p-5'>
                     <center>

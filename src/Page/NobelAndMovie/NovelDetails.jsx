@@ -21,8 +21,7 @@ const NovelDetails = () => {
     }, []);
 
     return (
-        <div className='overflow-hidden'>
-
+        <div className='overflow-hidden bg-gray-300'>
 
             <Helmet>
                 <title> Poetry Of Introversion | Novel Detail </title>
@@ -30,7 +29,7 @@ const NovelDetails = () => {
 
             <div className="divider my-20 mx-10 md:text-2xl">{author}</div>
 
-            <div className='grid md:grid-cols-2 mb-5 justify-center items-center md:mx-10'>
+            <div className='grid md:grid-cols-2 mb-5 justify-center items-center md:mx-10 bg-white p-10'>
                 <center>
 
                     <div className='dailyImage' data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">

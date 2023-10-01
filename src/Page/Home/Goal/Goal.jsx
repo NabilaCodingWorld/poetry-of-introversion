@@ -18,7 +18,7 @@ const Goal = () => {
 
         <div className='overflow-hidden'>
             <div className="divider my-20 mx-10 md:text-2xl">Why I Love Lonelyness</div>
-            <div className='my-20 grid md:grid-cols-2 gap-10 md:mx-10 mx-4 justify-center items-center'>
+            <div className='my-20 grid md:grid-cols-2 gap-10 md:mx-10 mx-4 justify-center items-center bg-white p-10'>
                 
                 <div  data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" className='myImage'>
                     <div id="zooms-Ins">

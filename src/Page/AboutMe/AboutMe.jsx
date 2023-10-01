@@ -17,7 +17,7 @@ const AboutMe = () => {
     }, []);
 
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden bg-gray-300'>
 
             <Helmet>
                 <title> Poetry Of Introversion | About Me </title>
@@ -38,7 +38,7 @@ const AboutMe = () => {
 
             <div className="divider my-20 md:mx-10 md:text-2xl">Some Information About Myself</div>
 
-            <div className='grid md:grid-cols-2 justify-center items-center mx-10 my-10'>
+            <div className='grid md:grid-cols-2 justify-center items-center mx-10 my-10 bg-white p-10'>
                 <img data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" className='md:w-[50%] w-[100%] mb-5' src="https://i.ibb.co/c2wJHKD/nabila-50ca7da1.png" alt="" />
 
                 <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" className='text-xl'>
@@ -56,6 +56,7 @@ const AboutMe = () => {
                     <p className='mb-2'> <b>Favourite Movie: </b>Opur Songsar</p>
                     <p className='mb-2'> <b>Favourite Song: </b>Tujshe Naraz Nehi Jindegi</p>
                     <p className='mb-2'> <b>Favourite Person: </b>Ma</p>
+                    <p className='mb-2'> <b>Favourite Novel: </b>Satkahon</p>
                     <p className='mb-2'> <b>Hate Most: </b>Toxic Relatives and Friends</p>
                 </div>
 

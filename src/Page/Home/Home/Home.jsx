@@ -8,6 +8,7 @@ import Personality from '../Personality/Personality';
 import Coffee from '../Coffee/Coffee';
 import rocket from '../../../assets/rocket-png-40793.png'
 import { Helmet } from 'react-helmet-async';
+import './Home.css'
 
 
 const Home = () => {
@@ -28,12 +29,16 @@ const Home = () => {
       </Helmet>
 
       <Banner></Banner>
-      <Goal></Goal>
-      <Coffee></Coffee>
-      <Hobby></Hobby>
-      <Photo></Photo>
-      <Quote></Quote>
-      <Personality></Personality>
+          
+          <div className='bg-gray-200'>
+          <Goal></Goal>
+          <Coffee></Coffee>
+          <Hobby></Hobby>
+          <Photo></Photo>
+          <Quote></Quote>
+          <Personality></Personality>
+          </div>
+        
 
       <div className="md:ml-[1290px] ml-2 mt-10" style={{ position: 'fixed', top: '500px', width: '100%', zIndex: '1' }}> <br /> <br />
         {/* Your portfolio content */}
