@@ -17,6 +17,8 @@ import MyCart from "../Page/Dashboard/MyCart/MyCart";
 import ManageBlog from "../Page/Dashboard/ManageBlog";
 import AddNovel from "../Page/Dashboard/AddNovel";
 import ManageNovel from "../Page/Dashboard/ManageNovel";
+import AllUsers from "../Page/Dashboard/AllUsers";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -74,19 +76,23 @@ export const router = createBrowserRouter([
     children: [
       {
         path: 'myCart',
-        element: <MyCart></MyCart>
+        element: <AdminRoute><MyCart></MyCart></AdminRoute>
       },
       {
         path: 'manageBlog',
-        element: <ManageBlog></ManageBlog>
+        element: <AdminRoute><ManageBlog></ManageBlog></AdminRoute>
       },
       {
         path: 'addNovel',
-        element: <AddNovel></AddNovel>
+        element: <AdminRoute><AddNovel></AddNovel></AdminRoute>
       },
       {
         path: 'manageNovel',
-        element: <ManageNovel></ManageNovel>
+        element: <AdminRoute><ManageNovel></ManageNovel></AdminRoute>
+      },
+      {
+        path: 'allUsers',
+        element: <AllUsers></AllUsers>
       },
     ]
   }

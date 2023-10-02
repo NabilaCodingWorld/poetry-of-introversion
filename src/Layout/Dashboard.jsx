@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
+
+    // const isAdmin = true;
+
+    const [isAdmin] = useAdmin();
 
 
     return (
@@ -19,14 +24,31 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-40 bg-blue-800 mt-60  text-white font-bold animate-pulse">
 
-                        {/* Sidebar content here */}
-                        <Link to="/dashboard/myCart"><li><a className='hover:text-white'>Add Daily Blog</a></li></Link>
+                        {
+                            isAdmin ? <>
 
-                        <Link to="/dashboard/manageBlog"><li><a className='hover:text-white'>Manage Daily Blog</a></li></Link>
+                                {/* Sidebar content here */}
+                                <Link to="/dashboard/myCart"><li><a className='hover:text-white'>Add Daily Blog</a></li></Link>
 
-                        <Link to="/dashboard/addNovel"><li><a className='hover:text-white'>Add Novel and Movie Review</a></li></Link>
+                                <Link to="/dashboard/manageBlog"><li><a className='hover:text-white'>Manage Daily Blog</a></li></Link>
 
-                        <Link to="/dashboard/manageNovel"><li><a className='hover:text-white'>Manage Novel</a></li></Link>
+                                <Link to="/dashboard/addNovel"><li><a className='hover:text-white'>Add Novel and Movie Review</a></li></Link>
+                                
+                                <Link to="/dashboard/manageNovel"><li><a className='hover:text-white'>Manage Novel</a></li></Link>
+
+                                <Link to="/dashboard/allUsers"><li><a className='hover:text-white'>All Users</a></li></Link>
+  
+
+                            </>
+
+                                :
+
+                                <>
+                                    <h1>Hello</h1>
+                                </>
+                        }
+
+                        
                     </ul>
 
                     <Link to="/"><button className='btn btn-warning mt-3 ml-3'>Back To Home</button></Link>
