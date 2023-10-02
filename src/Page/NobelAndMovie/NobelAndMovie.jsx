@@ -13,7 +13,7 @@ const NobelAndMovie = () => {
 
     useEffect(() => {
         // Fetch data from 'novel.json' and update the 'novels' state
-        fetch('http://localhost:5000/novel')
+        fetch('https://poetry-of-introversion-server.vercel.app/novel')
             .then((res) => res.json())
             .then((data) => setNovels(data))
         // .catch((error) => console.error('Error fetching data:', error));

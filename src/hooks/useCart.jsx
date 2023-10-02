@@ -11,7 +11,7 @@ const useCart = () => {
     const {refetch, data:cart=[] } = useQuery({
         queryKey: ['carts', user?.email],
         queryFn: async() =>{
-            const response = await fetch(`http://localhost:5000/`)
+            const response = await fetch(`https://poetry-of-introversion-server.vercel.app/`)
         }
     })
 

@@ -10,7 +10,7 @@ const ManageBlog = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/dailyBlog')
+        fetch('https://poetry-of-introversion-server.vercel.app/dailyBlog')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])

@@ -10,7 +10,7 @@ const ManageNovel = () => {
     const [novels, setNovels] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/novel')
+        fetch('https://poetry-of-introversion-server.vercel.app/novel')
             .then(res => res.json())
             .then(data => setNovels(data))
     }, [])

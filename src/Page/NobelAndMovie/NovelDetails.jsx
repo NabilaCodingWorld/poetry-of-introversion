@@ -29,21 +29,19 @@ const NovelDetails = () => {
 
             <div className="divider my-20 mx-10 md:text-2xl">{author}</div>
 
-            <div className='grid md:grid-cols-2 mb-5 justify-center items-center md:mx-10 bg-white p-10'>
+            <div className='bg-white p-10 mb-5 mx-10'>
                 <center>
 
-                    <div className='dailyImage' data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
-                        <div id="zoom-In-daily">
-                            <figure>
-                                <img className='w-full' src={image} alt="" />
-                            </figure>
-                        </div>
-                    </div>
+
+                    <figure>
+                        <img className='w-[80%] h-[50%]' src={image} alt="" />
+                    </figure>
+
 
                     <p className='text-gray-400 mt-2'>{date}</p>
                 </center>
 
-                <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" className='my-5 md:mx-10 mx-4'>{text}</p>
+                <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" className='my-5 md:mx-10 md:text-xl mx-4'>{text}</p>
             </div>
 
             <center>

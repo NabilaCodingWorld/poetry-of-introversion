@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       {
         path: "/dailyBlog/:_id",
         element: <PrivateRoute><DailyBlogDetail></DailyBlogDetail></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/dailyBlog/${params._id}`)
+        loader: ({ params }) => fetch(`https://poetry-of-introversion-server.vercel.app/dailyBlog/${params._id}`)
       },
       {
         path: "/novel",
@@ -46,7 +46,7 @@ export const router = createBrowserRouter([
       {
         path: "/novel/:_id",
         element: <PrivateRoute><NovelDetails></NovelDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/novel/${params._id}`)
+        loader: ({ params }) => fetch(`https://poetry-of-introversion-server.vercel.app/novel/${params._id}`)
       },
 
       {

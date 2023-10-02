@@ -13,7 +13,7 @@ const DailyBlog = () => {
     const [postsPerPage, setPostsPerPage] = useState(6);
 
     useEffect(() => {
-        fetch('http://localhost:5000/dailyBlog')
+        fetch('https://poetry-of-introversion-server.vercel.app/dailyBlog')
             .then(res => res.json())
             .then(data => setDailyBlogs(data))
     }, [])
